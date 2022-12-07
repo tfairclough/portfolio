@@ -2,8 +2,9 @@ body {
     display: grid;
     grid-template-columns: 200px 1fr 1fr 1fr;
     grid-template-rows: 200px 1fr 1fr 1fr 100px;
-    width: 100vw;
-    height: 100vh;
+    grid-gap: 5px;
+    width: 99vw;
+    height: 99vh;
 }
 
 /* Headshot in the top left */
@@ -11,7 +12,6 @@ headshot {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .photo {
@@ -26,8 +26,8 @@ header {
     grid-column: 2/ span 3;
     display: flex;
     align-items: center;
-    background-color: rgb(9, 255, 255);
     font-size: 30px;
+    padding: 0 0 0 15px;
 
 }
 
@@ -40,8 +40,8 @@ header {
 
 /* Left hand-side navigation bar */
 .navbar {
-    background-image: url("marble.jpg");
-    background-repeat:repeat;
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to right, white, white,  #f12c2c);
     display: flex;
     background-color: m;
     grid-row: 2 / span 3;
@@ -50,11 +50,25 @@ header {
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-around;
-    border-right: 2px solid rgb(77, 77, 77);
     list-style-type: none;
-    font-size: 24px;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-size: 26px;
+    text-transform: uppercase;    
+}
+
+/* About me Section */
+.aboutme {
+    grid-row: 2/ span 2;
+    grid-column: 2 ;
+    background-image: url('tree.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutmetext {
+    opacity: 1;
 }
 
 .navcontents:hover {
@@ -63,13 +77,14 @@ header {
 
 
 
-
-
 /* Footer of the document */
 footer {
-    display: flex;
-    justify-content: space-around;
-    background-color: aqua;
     grid-row: 5;
     grid-column: 1/span 4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    padding: 0 20%;
 }
+
