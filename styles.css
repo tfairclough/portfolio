@@ -1,0 +1,75 @@
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 1fr;
+    grid-template-rows: 200px 1fr 1fr 1fr 100px;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Headshot in the top left */
+headshot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.photo {
+    border-radius: 50%;
+    height: 95%;
+}
+
+
+/* Header of the document */
+header {
+    grid-row: 1;
+    grid-column: 2/ span 3;
+    display: flex;
+    align-items: center;
+    background-color: rgb(9, 255, 255);
+    font-size: 30px;
+
+}
+
+.blurb {
+    font-size: 28px;
+    font-style: italic;
+}
+
+
+
+/* Left hand-side navigation bar */
+.navbar {
+    background-image: url("marble.jpg");
+    background-repeat:repeat;
+    display: flex;
+    background-color: m;
+    grid-row: 2 / span 3;
+    grid-column: 1;
+    padding: 0 5px 0 0;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    border-right: 2px solid rgb(77, 77, 77);
+    list-style-type: none;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navcontents:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* Footer of the document */
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+    grid-row: 5;
+    grid-column: 1/span 4;
+}
