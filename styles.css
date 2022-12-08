@@ -1,11 +1,11 @@
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 200px 70px 0.5fr 1fr 1fr 1fr 0.5fr 40px;
-    width: 99vw;
-    height: 99vh;
+    grid-template-rows: 200px 70px 0.5fr 1fr 1fr 1fr 0.5fr 50px;
+    width: 100vw;
+    height: 100vh;
     min-height: 600px;
-    min-width:600px
+    min-width:600px;
 }
 
 /* Headshot in the top left */
@@ -30,7 +30,6 @@ header {
     align-items: center;
     font-size: 40px;
     line-height: 5px;
-    padding: 0 0 0 15px;
     white-space: nowrap;
 }
 
@@ -48,18 +47,23 @@ header {
 .navbar {
     font-family: 'Open Sans', sans-serif;
     background-image: linear-gradient(to bottom, white, #00b1f7);
-    display: flex;
-    background-color: m;
     grid-row: 2 ;
-    grid-column: 1/ span 5;
-    padding: 0 5px 0 0;
-    align-items: flex-end;
-    justify-content: space-around;
-    list-style-type: none;
-    font-size: 30px;
-    text-transform: uppercase;    
+    grid-column: 1/ span 8;
+
 }
 
+.navcontents {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    list-style-type: none;
+    font-size: 30px;
+    text-transform: uppercase; 
+}
+
+.navtext:hover {
+    text-decoration: underline;
+}
 
 /* Images in center */
 
@@ -113,33 +117,34 @@ header {
 }
 
 
-.navcontents:hover {
-    text-decoration: underline;
-}
+
 
 
 /* Footer of the document */
 footer {
     grid-row: 8;
     grid-column: 1/span 5;
+
+}
+
+.footerformat {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     list-style-type: none;
     background-color: rgb(26, 34, 78);
     color: white;
-    padding: 0 50px;
 }
 
 .socailmedialinks {
     height: 30px;
     width: 30px;
-    margin: 0 5px
+    margin: 0 5px;
 }
 
 .media {
     font-size: 20px;
-    margin: 10px;
+    margin: 0 10px;
 }
 
 .phonenumber {
