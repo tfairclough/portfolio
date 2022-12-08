@@ -1,17 +1,19 @@
 body {
     display: grid;
-    grid-template-columns: 200px 1fr 1fr 1fr;
-    grid-template-rows: 200px 1fr 1fr 1fr 100px;
-    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 70px 0.5fr 1fr 1fr 1fr 0.5fr 40px;
     width: 99vw;
     height: 99vh;
+    min-height: 600px;
+    min-width:600px
 }
 
 /* Headshot in the top left */
-headshot {
+.headshot {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    padding: 0 20px;
 }
 
 .photo {
@@ -23,17 +25,21 @@ headshot {
 /* Header of the document */
 header {
     grid-row: 1;
-    grid-column: 2/ span 3;
+    grid-column: 2/ span 5;
     display: flex;
     align-items: center;
-    font-size: 30px;
+    font-size: 40px;
+    line-height: 5px;
     padding: 0 0 0 15px;
-
+    white-space: nowrap;
 }
+
 
 .blurb {
     font-size: 28px;
     font-style: italic;
+    line-height: 28px;
+    white-space:normal
 }
 
 
@@ -41,50 +47,117 @@ header {
 /* Left hand-side navigation bar */
 .navbar {
     font-family: 'Open Sans', sans-serif;
-    background-image: linear-gradient(to right, white, white,  #f12c2c);
+    background-image: linear-gradient(to bottom, white, #00b1f7);
     display: flex;
     background-color: m;
-    grid-row: 2 / span 3;
-    grid-column: 1;
+    grid-row: 2 ;
+    grid-column: 1/ span 5;
     padding: 0 5px 0 0;
-    flex-direction: column;
     align-items: flex-end;
     justify-content: space-around;
     list-style-type: none;
-    font-size: 26px;
+    font-size: 30px;
     text-transform: uppercase;    
 }
 
-/* About me Section */
-.aboutme {
-    grid-row: 2/ span 2;
-    grid-column: 2 ;
-    background-image: url('tree.jpg');
+
+/* Images in center */
+
+.divider {
     background-size: cover;
+    background-clip: content-box;  
+    padding: 10px;
+    min-width: 150px;
+    min-height: 150px;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.aboutmetext {
-    opacity: 1;
+
+.photo1 {
+    grid-row: 4 / span 2;
+    grid-column: 2;
+    background-image: URL('city.jpeg'); 
+    border-right: 5px solid #00b1f7;
+    border-bottom : 5px solid #00b1f7;
 }
+
+.photo2 {
+    grid-row: 4;
+    grid-column: 3 /span 2;
+    background-image: URL('outback.jpg');
+    border-top : 5px solid #00b1f7;
+    border-right: 5px solid #00b1f7;
+}
+
+.photo3 {
+    grid-row: 6;
+    grid-column: 2 /span 2;
+    background-image: URL('Ocean.jpg');
+    border-left: 5px solid #00b1f7;
+    border-bottom : 5px solid #00b1f7;
+    background-position: center bottom;
+}
+
+.photo4 {
+    grid-row: 5/ span 2;
+    grid-column: 4 ;
+    background-image: URL('tree.jpg');
+    border-left: 5px solid #00b1f7;
+    border-top:  5px solid #00b1f7;
+}
+
+.photo5 {
+    grid-row: 5 ;
+    grid-column: 3;
+    background-image: URL('VSCode.webp');
+}
+
 
 .navcontents:hover {
     text-decoration: underline;
 }
 
 
-
 /* Footer of the document */
 footer {
-    grid-row: 5;
-    grid-column: 1/span 4;
+    grid-row: 8;
+    grid-column: 1/span 5;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     list-style-type: none;
-    padding: 0 20%;
+    background-color: rgb(26, 34, 78);
+    color: white;
+    padding: 0 50px;
 }
 
+.socailmedialinks {
+    height: 30px;
+    width: 30px;
+    margin: 0 5px
+}
+
+.media {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.phonenumber {
+    padding: 0 50px;
+    font-size: 20px;
+}
+
+.contact, .media {
+    font-weight: 800;
+}
+
+/* Add in the mobile media criteria */
+
+@media only screen and (max-width: 600px) {
+    header  {
+        font-size: 40px;
+    }
+    .blurb {
+        font-size: 20px;
+    }
+  }
